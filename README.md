@@ -21,13 +21,13 @@ https://github.com/user-attachments/assets/99fc8bc6-2a4a-4fcf-88be-1fe0e4b958a9
 [零基础简易修改主题方法](https://github.com/bjl101501/CherryStudio-Claudestyle-dynamic/blob/main/dev.md)  
 
 ---
-**当前适配：Cherry Studio  < v1.2.4**
+**当前适配：Cherry Studio **
 ### CSS  
 ```css
 /* ======================== 全局主题变量定义 ======================== */
 :root {
-    --chat-background-white: #F5F4ED;
-    --color-border: rgba(120,120,120,0.08) !important;
+    --chat-background-white: #FDF9F3;
+    --color-border: rgba(139, 115, 85, 0.12) !important;
 }
 
 /* 全局样式设置 - 设置基本字体、行高、字母间距和字体粗细 */
@@ -44,53 +44,54 @@ pre *, code *, kbd, samp, tt {
 }
 
 .markdown * code {
-	color: rgb(203,64,66);
-	font-family: "Maple Mono NL CN", monospace !important;
+    color: rgb(203,64,66);
+    font-family: "Maple Mono NL CN", monospace !important;
 }
 
-/* 浅色模式颜色定义 - 采用Claude的色调 */
+/* 浅色模式颜色定义 - 采用Claude的色调，背景色使用第二个CSS */
 body[theme-mode=light] {
     --color-primary: #C96442 !important;
     --color-primary-soft: rgba(201, 100, 66, 0.6);
     --color-primary-mute: rgba(201, 100, 66, 0.2);
-    --color-background: #F5F4ED;       /* 侧边栏背景色 */
-    --color-background-mute: #F0EFEB;  /* 略深的背景色 */
-    --color-background-soft: #F0EEE6;  /* 中浅色背景 */
-    --navbar-background: #F5F4ED;      /* 导航栏背景色 */
-    --chat-background: #FAF9F5;        /* 聊天区域总体背景 */
-    --chat-background-white: #FAF9F5;  /* 聊天背景 */
-    --chat-background-user: #F0EEE6;   /* 用户消息气泡背景色 */
-    --chat-background-assistant: #FAF9F5; /* AI助手消息气泡背景色 */
+    --color-background: #FDF9F3;       /* 侧边栏背景色 - 使用第二个CSS的背景 */
+    --color-background-mute: #F5F0E8;  /* 略深的背景色 - 使用第二个CSS */
+    --color-background-soft: #F9F4EC;  /* 中浅色背景 - 使用第二个CSS */
+    --navbar-background: #FDF9F3;      /* 导航栏背景色 - 使用第二个CSS */
+    --chat-background: #FDF9F3;        /* 聊天区域总体背景 - 使用第二个CSS */
+    --chat-background-white: #FDF9F3;  /* 聊天背景 - 使用第二个CSS */
+    --chat-background-user: #F5F0E8;   /* 用户消息气泡背景色 - 使用第二个CSS */
+    --chat-background-assistant: #FDF9F3; /* AI助手消息气泡背景色 - 使用第二个CSS */
     --color-text: #262624;             /* 文字颜色（深色） */
-    --color-border: rgba(35, 35, 45, 0.12); /* 边框颜色 */
+    --color-border: rgba(139, 115, 85, 0.15); /* 边框颜色 - 使用第二个CSS */
 }
 
-/* 深色模式颜色定义 - 融合Claude深色主题 */
+/* 深色模式颜色定义 - 融合Claude深色主题，背景色使用第二个CSS */
 body[theme-mode=dark] {
     --color-primary: #C96442 !important;          /* 保持主色调一致 */
     --color-primary-soft: rgba(201, 100, 66, 0.6);
     --color-primary-mute: rgba(201, 100, 66, 0.2);
-    --color-background: #1F1E1D;       /* Claude深色背景色 */
-    --color-background-mute: #2E2E2B;  /* 略浅的背景色 */
-    --color-background-soft: #141413;  /* 中等深色 */
-    --navbar-background-mac: rgba(35, 35, 45, 0.85); /* Mac导航栏半透明背景 */
-    --navbar-background: #262624;      /* 导航栏背景色 */
-    --chat-background: #262624;        /* 聊天区域总体背景 */
-    --chat-background-white: #262624;  /* 深色背景 */
-    --chat-background-user: #141413;   /* 用户消息背景 */
-    --chat-background-assistant: #262624; /* AI助手消息背景 */
-    --color-border: rgba(239, 239, 241, 0.15); /* 边框颜色 */
+    --color-background: #1E1C1A;       /* Claude深色背景色 - 使用第二个CSS */
+    --color-background-mute: #2A2722;  /* 略浅的背景色 - 使用第二个CSS */
+    --color-background-soft: #141210;  /* 中等深色 - 使用第二个CSS */
+    --navbar-background-mac: rgba(30, 28, 26, 0.85); /* Mac导航栏半透明背景 */
+    --navbar-background: #262422;      /* 导航栏背景色 - 使用第二个CSS */
+    --chat-background: #1E1C1A;        /* 聊天区域总体背景 - 使用第二个CSS */
+    --chat-background-white: #1E1C1A;  /* 深色背景 - 使用第二个CSS */
+    --chat-background-user: #141210;   /* 用户消息背景 - 使用第二个CSS */
+    --chat-background-assistant: #1E1C1A; /* AI助手消息背景 - 使用第二个CSS */
+    --color-border: rgba(200, 180, 150, 0.15); /* 边框颜色 - 使用第二个CSS */
     --chat-text-user: #e8e6de;         /* 用户消息文字颜色 */
     --color-text: #bdbcb8;             /* 全局文字颜色 */
 }
 
-/* Claude 样式的消息容器 - 添加动态效果 */
+/* Claude 样式的消息容器 - 添加动态效果和第二个CSS的倒角 */
 .message-content-container {
     background: var(--chat-background-white) !important;
     margin: 8px 0 !important;
     padding: 10px 10px 0 10px !important;
     transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease !important;
     border: 1px solid var(--color-border) !important;
+    border-radius: 12px !important; /* 添加第二个CSS的倒角 */
     box-shadow: none !important;
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
@@ -115,6 +116,7 @@ body[theme-mode='dark'] .markdown {
     background: var(--chat-background-user) !important;
     box-shadow: 0 8px 32px -12px rgba(0,0,0,0.03) !important;
     border: 1px solid var(--color-border) !important;
+    border-radius: 12px !important; /* 添加第二个CSS的倒角 */
     transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease !important;
 }
 
@@ -128,6 +130,7 @@ body[theme-mode='dark'] .message-content-container {
     background: var(--chat-background-assistant) !important;
     box-shadow: none !important;
     border: 1px solid var(--color-border) !important;
+    border-radius: 12px !important; /* 添加第二个CSS的倒角 */
 }
 
 body[theme-mode='dark'] .message-content-container:hover {
@@ -138,18 +141,19 @@ body[theme-mode='dark'] .message-user .message-content-container {
     background: var(--chat-background-user) !important;
     box-shadow: 0 8px 32px -12px rgba(0,0,0,0.3) !important;
     border: 1px solid var(--color-border) !important;
+    border-radius: 12px !important; /* 添加第二个CSS的倒角 */
 }
 
 body[theme-mode='dark'] .message-user .message-content-container:hover {
     box-shadow: 0 12px 40px -10px rgba(255,255,255,0.05) !important;
 }
 
-/* 输入框样式 - 增强动态效果 */
+/* 输入框样式 - 增强动态效果，添加第二个CSS的倒角 */
 #inputbar {
     margin: 0px 10px 10px 10px;
     background: #FFFFFF !important; /* 纯白色输入框背景 */
     border: 1px solid var(--color-border) !important;
-    border-radius: 20px !important;
+    border-radius: 16px !important; /* 使用第二个CSS的倒角值 */
     box-shadow: 0 8px 32px -12px rgba(0,0,0,0.03) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -268,35 +272,6 @@ body[theme-mode='dark'] .bubble * .message-action-button:hover {
     transform: scale(1.1); /* 悬停或焦点时放大 */
 }
 ```
----
-### 相比原始聊天文档：
-- 修改按钮悬停样式`.ant-btn-primary:hover, .ant-btn-primary:focus`
-  
-    ![image](https://github.com/user-attachments/assets/1293ccd8-b2eb-4483-8882-ee1944ffe59b)
-
-- ~~隐藏开始新对话~~  
-  ~~版本v1.2.3 pre，其他版本不一定生效~~  V1.2.4 版本已去除新对话按钮
-  
-  ```
-  .kwIEiN {   
-      display: none;    
-  }    
-  ```
-  ![image](https://github.com/user-attachments/assets/1d30bd55-60a0-4b2a-9cea-0b6c2ed585a6)  
-
-  
-- 修改行内代码样式  
-    ```
-    .markdown * code {
-    	color: rgb(203,64,66);
-    	font-family: "Maple Mono NL CN", monospace !important;
-    	font-size: 12px
-    }
-    ```
-    ![image](https://github.com/user-attachments/assets/717016a7-7d54-460b-a3cf-8250faff42d1)  
-- 修改深色模式字体颜色
-- 修改输入框边框变色
-  
   
 
 --- 
