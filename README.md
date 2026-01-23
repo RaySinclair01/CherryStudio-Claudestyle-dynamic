@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/99fc8bc6-2a4a-4fcf-88be-1fe0e4b958a9
 
 /* 全局样式设置 - 设置基本字体、行高、字母间距和字体粗细 */
 * {
-    font-family: "霞鹜文楷 GB 屏幕阅读版", system-ui !important;
+   /* font-family: "霞鹜文楷 GB 屏幕阅读版", system-ui !important; */ 
     line-height: 1.7 !important;
     letter-spacing: 0.018em !important;
     font-weight: 500;
@@ -53,11 +53,11 @@ body[theme-mode=light] {
     --color-primary: #C96442 !important;
     --color-primary-soft: rgba(201, 100, 66, 0.6);
     --color-primary-mute: rgba(201, 100, 66, 0.2);
-    --color-background: #FDF9F3;       /* 侧边栏背景色 - 使用第二个CSS的背景 */
-    --color-background-mute: #F5F0E8;  /* 略深的背景色 - 使用第二个CSS */
-    --color-background-soft: #F9F4EC;  /* 中浅色背景 - 使用第二个CSS */
-    --navbar-background: #FDF9F3;      /* 导航栏背景色 - 使用第二个CSS */
-    --chat-background: #FDF9F3;        /* 聊天区域总体背景 - 使用第二个CSS */
+    --color-background: #F0ECE2;       /* 侧边栏背景色 - 使用第二个CSS的背景 */
+    --color-background-mute: #E6E0D4;  /* 略深的背景色 - 使用第二个CSS */
+    --color-background-soft: #EBE6DE;  /* 中浅色背景 - 使用第二个CSS */
+    --navbar-background: #F0ECE2;      /* 导航栏背景色 - 使用第二个CSS */
+    --chat-background: #F0ECE2;        /* 聊天区域总体背景 - 使用第二个CSS */
     --chat-background-white: #FDF9F3;  /* 聊天背景 - 使用第二个CSS */
     --chat-background-user: #F5F0E8;   /* 用户消息气泡背景色 - 使用第二个CSS */
     --chat-background-assistant: #FDF9F3; /* AI助手消息气泡背景色 - 使用第二个CSS */
